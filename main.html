@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+		<!-- DataTables -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/datatables.min.css"/>
+		
+		<!-- Roboto Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+		
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		
+		<title>Customer Advocacy Data Catalog</title>
+		
+		
+
+		<!-- Custom CSS -->
+		
+		
+				<style type="text/css">
+			* {
+				font-family: Roboto, sans-serif;
+				background-color: '';
+			}	
+			body {
+				background-color: '';
+				color: '';
+			}
+			h1 {
+				color: #ccc;
+				border-bottom: 1px solid #ccc;
+				font-size: 2rem;
+				margin-top: 3rem;
+			}
+			h2 {
+				color: #ccc;
+				font-size: 1.5rem;
+				margin-top: 2rem;
+			}
+			a {
+				color: '';
+			}
+			a:hover {
+				color: '';
+			}
+			a:active {
+				color: '';
+			}
+			.navbar .dropdown-header {
+				padding-bottom: 0.1rem;
+			}
+			.navbar .dropdown-header:not(:first-child) {
+				padding-top: 1.1rem;
+			}
+			.navbar .dropdown-item {
+				font-size: small;
+				padding-left: 2.5em;
+				padding-bottom: 0.1em;
+				padding-top: 0.1em;
+			}
+			.navbar .dropdown-item:hover {
+				background-color: rgba(0,1,0,.2);
+			}
+			.technical_details_card {
+				margin-bottom: 1rem;
+			}
+			.secret {
+				display: none;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+			<div class="navbar-brand">Customer Advocacy Data Catalog</div>
+		</div>
+
+		<div class='container-fluid'>
+			<div class="row">
+					<div class="col-12">
+					<h2>Data File List</h2>
+					<h5>
+						<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin: 0em;border: 0em;padding: 0em">
+							<input type="text" class="form-control bg-light bg-light" id="mitigation_input" onkeyup="mitigation_function()" placeholder="Enter Search Name..." style="width: 100%; border: 1px solid #ddd;">
+						</nav>	
+					</h5>
+				</div>
+				<div class="col-12">
+					<table class="table" id="mitigation_table">
+						<div class="accordion" id="accordionExample">
+							<div class="card" style="padding: .05em">
+								<div class="card-header bg-light bg-light" id="heading" style="padding: .05em">
+									<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 0em;">
+										<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;">Title</a>
+											</div>											
+											<div class="navbar-nav text-center" style="width: 10em;">Short Description</div>
+											<div class="navbar-nav text-center" style="width: 10em;">Maintained By</div>
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;">Further Details</a>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>
+
+							<div class="card" style="padding: .05em">
+								<div class="card-header bg-light bg-light" id="headingall_complaints" style="padding: .05em">
+									<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 0em;">
+										<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="Z:\QA\Data Analysis\Follow App">Follow_Apps</a>
+											</div>												
+											<div class="navbar-nav text-center" style="width: 10em;">Testing Data</div>
+											<div class="navbar-nav text-center" style="width: 10em;">Thomas McGinn</div>
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="Follow_App.html">Further Details</a>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>
+
+							<div class="card" style="padding: .05em">
+								<div class="card-header bg-light bg-light" id="headingall_complaints" style="padding: .05em">
+									<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 0em;">
+										<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="Z:\QA\Data Analysis\G6 14 Day">G6 14 Day</a>
+											</div>												
+											<div class="navbar-nav text-center" style="width: 10em;">Testing Data</div>
+											<div class="navbar-nav text-center" style="width: 10em;">Thomas McGinn</div>
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="G6_14 Days.html">Further Details</a>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>		
+							
+							<div class="card" style="padding: .05em">
+								<div class="card-header bg-light bg-light" id="headingall_complaints" style="padding: .05em">
+									<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 0em;">
+										<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="Z:\QA\Data Analysis\G6 Adverse Events">G6 Adverse Events</a>
+											</div>												
+											<div class="navbar-nav text-center" style="width: 10em;">Pulls G6 Adverse Event complaints from the past week</div>
+											<div class="navbar-nav text-center" style="width: 10em;">Christopher Stetzer</div>
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="#">Further Details</a>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>							
+
+							<div class="card" style="padding: .05em">
+								<div class="card-header bg-light bg-light" id="headingall_complaints" style="padding: .05em">
+									<nav class="navbar navbar-expand-sm navbar-light bg-light" style="margin-bottom: 0em;">
+										<div class="collapse navbar-collapse d-flex justify-content-between navbar-light bg-light">
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="Z:\QA\Data Analysis\Reliance ACKs Mitigation">Reliance ACKs Mitigation</a>
+											</div>												
+											<div class="navbar-nav text-center" style="width: 10em;">Reliance ACKs Mitigation for Customer Advocacy</div>
+											<div class="navbar-nav text-center" style="width: 10em;">Thomas McGinn</div>
+											<div class="navbar-nav justify-content-end">
+												<a class="mt-1 btn btn-sm btn-outline text-right" style="white-space: normal;" href="#">Further Details</a>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>
+				</div>
+			</div>
+
+			<!-- Spacer -->
+			<div class="mt-5"></div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+		<!-- DataTables -->
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/datatables.min.js"></script>
+
+		<!-- Moment.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
+		<!-- MouseTrap -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// Update timestamps every 10 seconds.
+				function update_moment_counters() {
+					$.each($('.moment_container'), function(index, value) {
+						$(value).text(moment($(value).attr('timestamp')).fromNow());
+					})
+				}
+				update_moment_counters();
+				window.setInterval(update_moment_counters, 10000);
+				
+				// Toggle timestamps container when the user clicks on the "Last Updated" navbar item.
+				$('#navbar_last_updated_container').click(function() {
+					$('#timestamps_container').toggle(400);
+				});
+
+				// Show secret items if show_secrets is true in local storage.
+				if (localStorage.getItem('show_secrets') == 'true') {
+					$('.secret').toggle(true);
+				}
+
+				// Toggle secret items when "voila" is typed.
+				Mousetrap.bind('v o i l a', function() {
+					$('.secret').toggle(duration=200, complete=function() {
+						if ($('.secret').is(':visible')) {
+							localStorage.setItem('show_secrets', 'true');
+						} else {
+							localStorage.setItem('show_secrets', 'false');
+						}
+					});
+				});
+			})
+		</script>
+
+		<script>
+				function mitigation_function() {
+					// Declare variables 
+					var id, input, filter, table, tr, td, i;
+
+					id = $("#accordionExample .collapse");
+					id.removeClass('show')
+
+					input = document.getElementById("mitigation_input");
+					filter = input.value.toUpperCase();
+					table = document.getElementById("accordionExample");
+					tr = table.getElementsByClassName("card");
+
+					// Loop through all table rows, and hide those who don't match the search query
+					for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("button")[0];
+					if (td) {
+						if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					} 
+					}
+				}
+
+				function expand_all() {
+					// Declare variables
+					var id, id_show, i;
+
+					id = $("#accordionExample .collapse");
+					id_show = $("#accordionExample .collapse.show");
+
+					if (id_show.length == id.length) {
+						id.removeClass('show')
+					} else {
+						id.addClass('show')
+					}
+				}
+			</script>
+
+		
+	</body>
+</html>
